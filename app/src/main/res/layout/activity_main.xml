@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.slidingpanelayout.widget.SlidingPaneLayout
+        android:id="@+id/slidingPane"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/listPane"
+            android:layout_width="320dp"
+            android:paddingTop="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start">
+
+            <Button
+                android:id="@+id/openDetailPane"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Open Details" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/detailPane"
+            android:layout_width="280dp"
+            android:paddingTop="100dp"
+            android:padding="32dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <androidx.compose.ui.platform.ComposeView
+                android:id="@+id/detailCompose"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </FrameLayout>
+
+    </androidx.slidingpanelayout.widget.SlidingPaneLayout>
+
+
+</FrameLayout>
